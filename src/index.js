@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// App.js 에 넣은 컨텐츠를 index.html <div> root에 삽입하는 구문
+// index.html가 아닌 다른 곳은 들어가지 못하는 것 같다..?
+// react application이 하나의 component만을 rendering 해야하기 때문에
+// 여러 개의 component는 넣을 수 없다.
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(<App />, document.getElementById('App'));
+
